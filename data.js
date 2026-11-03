@@ -1,81 +1,60 @@
-// Base de données du Parcours
-const parcours = [
+// C'est ICI que tu pourras modifier tes textes et ajouter des projets !
+const portfolioData = [
     {
-        role: "Ingénieur des travaux — Réseaux et Systèmes Informatiques",
-        institution: "Institut Supérieur de Technologies (IST)",
-        description: "Spécialisation en administration systèmes, réseaux et technologies d'infrastructure."
+        id: "aminou-gym",
+        year: "2026 — PRESENT",
+        title: "Aminou Gym Management",
+        role: "Développeur Freelance & Architecte BDD",
+        description: "Conception d'une application de gestion pour une salle de sport (500+ membres). Modélisation relationnelle, abonnements et suivi financier.",
+        longDesc: "<p>Mission freelance visant à digitaliser la gestion d'une salle de sport. J'ai conçu le schéma relationnel sous PostgreSQL (hébergé sur Supabase) et développé l'interface de pilotage complète.</p><p>L'application permet la gestion des abonnements en temps réel, le suivi de présence, la tarification dynamique, et intègre une analyse de rétention (churn) pour identifier les membres à risque.</p>",
+        tags: ["PostgreSQL", "Supabase", "SQL Avancé"],
+        link: "" // Laisse vide si tu n'as pas de lien public
     },
-    {
-        role: "Président exécutif",
-        institution: "Union des Étudiants et Stagiaires Burkinabè en Algérie (UESBA)",
-        description: "Direction du bureau exécutif (7 collaborateurs). Représentation institutionnelle auprès de l'Ambassade et du Ministère."
-    },
-    {
-        role: "BTS Informatique — Option Base de données",
-        institution: "INSFP de Relizane",
-        description: "Major de promotion (moyenne 16,8/20). Conception, requêtage relationnel, optimisation et administration de données."
-    },
-    {
-        role: "Baccalauréat technique (H, informatique)",
-        institution: "Lycée Technique Nationale/ASL",
-        description: "Mention Bien. 4e rang national. Prix de l'excellence de l'éducation nationale."
-    }
-];
-
-// Base de données des Projets (Études de cas détaillées)
-const projets = [
     {
         id: "uesba-web",
+        year: "2026",
         title: "Plateforme Web UESBA",
-        shortDesc: "Coordination d'équipe et modélisation de la base de données relationnelle.",
-        longDesc: "<p>En tant que chef de projet web, j'ai coordonné une équipe de 4 personnes pour concevoir l'architecture backend et administrer la base de données relationnelle du site officiel de l'association.</p><p>Supervision de l'avancement technique et validation des livrables en garantissant le respect des délais via MS Project.</p>",
-        tags: ["Gestion de projet", "Backend", "MS Project"],
+        role: "Chef de projet technique",
+        description: "Coordination d'une équipe de 4 personnes. Conception de l'architecture back-end et base de données relationnelle associative.",
+        longDesc: "<p>En tant que chef de projet web pour l'association, j'ai coordonné une équipe de 4 personnes, de la rédaction stricte du cahier des charges jusqu'à la mise en production du site officiel.</p><p>Mes tâches principales incluaient le développement de l'architecture back-end, l'administration de la base de données relationnelle, et la supervision des livrables pour garantir les délais avec MS Project.</p>",
+        tags: ["Gestion de Projet", "Backend", "Bases de données"],
         link: "https://uesba.org"
     },
     {
-        id: "aminou-gym",
-        title: "Aminou GYM Management System",
-        shortDesc: "Application de gestion complète pour une salle de sport (500+ membres).",
-        longDesc: "<p>Mission freelance visant à digitaliser la gestion d'une salle de sport. Conception du schéma relationnel sous PostgreSQL (hébergé sur Supabase) et développement de l'interface de pilotage.</p><p>L'application gère les abonnements, la présence, la tarification, le suivi financier et l'analyse de rétention (churn) des membres à risque.</p>",
-        tags: ["PostgreSQL", "Supabase", "Appsmith"],
-        link: "" 
-    },
-    {
-        id: "powerbi-uesba",
-        title: "Analyses de Données & Tableaux de bord",
-        shortDesc: "Recensement et visualisation dynamique de données avec Power BI et Excel.",
-        longDesc: "<p>Réalisation du recensement de l'UESBA. Nettoyage des données via Power Query et conception d'un tableau de bord couvrant plus de 400 membres. Cet outil est actuellement exploité par l'ambassade et le bureau de l'association pour la prise de décision stratégique.</p>",
-        tags: ["Power BI", "Power Query", "Excel avancé"],
-        link: "https://github.com/alisalia-44"
+        id: "data-bi",
+        year: "2025 — 2026",
+        title: "Analyses de Données & BI",
+        role: "Data Analyst",
+        description: "Recensement UESBA. Nettoyage via Power Query et conception de tableaux de bord interactifs d'aide à la décision.",
+        longDesc: "<p>J'ai mené le recensement complet de l'UESBA. Les données brutes ont été nettoyées et structurées via Power Query.</p><p>J'ai ensuite conçu un tableau de bord analytique couvrant plus de 400 membres. Cet outil de Business Intelligence est actuellement exploité par l'ambassade et le bureau exécutif de l'association pour orienter leurs décisions stratégiques.</p>",
+        tags: ["Power BI", "Power Query", "Excel Avancé"],
+        link: ""
     }
 ];
 
-// 1. Injection du Parcours
-const timelineContainer = document.getElementById("timeline-container");
-timelineContainer.innerHTML = parcours.map(item => `
-    <div class="timeline-item">
-        <div class="timeline-role">${item.role}</div>
-        <div class="timeline-place">${item.institution}</div>
-        <div class="timeline-desc">${item.description}</div>
-    </div>
-`).join("");
+const container = document.getElementById('projects-container');
 
-// 2. Injection des Projets
-const projectsContainer = document.getElementById("projects-container");
-projectsContainer.innerHTML = projets.map(proj => `
-    <div class="card">
-        <div>
-            <h3>${proj.title}</h3>
-            <p>${proj.shortDesc}</p>
-            <div class="tags">
-                ${proj.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}
+// Injection des cartes de projets
+portfolioData.forEach(project => {
+    const tagsHTML = project.tags.map(tag => `<span>${tag}</span>`).join('');
+    const projectHTML = `
+    <div class="project-item">
+        <div class="project-year">${project.year}</div>
+        <div class="project-content">
+            <h3>${project.title}</h3>
+            <div class="project-role">${project.role}</div>
+            <p class="project-desc">${project.description}</p>
+            <div class="tech-tags">
+                ${tagsHTML}
             </div>
+            <button class="read-more-link btn-voir-plus" data-id="${project.id}">Voir l'étude de cas →</button>
         </div>
-        <button class="btn-voir-plus" data-id="${proj.id}">Voir l'étude de cas →</button>
     </div>
-`).join("");
+    `;
+    container.innerHTML += projectHTML;
+});
 
-// 3. Logique de la Fenêtre Modale
+// --- LOGIQUE DE LA FENÊTRE MODALE ---
 const modal = document.getElementById("project-modal");
 const closeModalBtn = document.getElementById("close-modal");
 const modalTitle = document.getElementById("modal-title");
@@ -83,15 +62,15 @@ const modalTags = document.getElementById("modal-tags");
 const modalBody = document.getElementById("modal-body");
 const modalLink = document.getElementById("modal-link");
 
-// Ouvrir la modale
+// Ouverture
 document.querySelectorAll(".btn-voir-plus").forEach(button => {
     button.addEventListener("click", (e) => {
         const projectId = e.target.getAttribute("data-id");
-        const projectData = projets.find(p => p.id === projectId);
+        const projectData = portfolioData.find(p => p.id === projectId);
 
         if (projectData) {
             modalTitle.textContent = projectData.title;
-            modalTags.innerHTML = projectData.tags.map(tag => `<span class="tag">${tag}</span>`).join("");
+            modalTags.innerHTML = projectData.tags.map(tag => `<span>${tag}</span>`).join("");
             modalBody.innerHTML = projectData.longDesc;
             
             if (projectData.link) {
@@ -106,16 +85,28 @@ document.querySelectorAll(".btn-voir-plus").forEach(button => {
     });
 });
 
-// Fermer la modale
+// Fermeture
 const closeModal = () => {
     modal.classList.add("hidden");
 };
 
 closeModalBtn.addEventListener("click", closeModal);
-
-// Fermer au clic à l'extérieur de la fenêtre
 window.addEventListener("click", (e) => {
     if (e.target === modal) {
         closeModal();
     }
+});
+
+// --- SCROLL FLUIDE POUR LA NAVBAR ---
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-center a').forEach(a => a.classList.remove('active'));
+        if(this.parentElement.classList.contains('nav-center')) {
+            this.classList.add('active');
+        }
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });

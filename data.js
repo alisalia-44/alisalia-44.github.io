@@ -1,33 +1,43 @@
-// C'est ICI que tu pourras modifier tes textes et ajouter des projets !
+// C'est ICI que tu peux modifier tes textes et ajouter de nouveaux projets ou expériences !
 const portfolioData = [
     {
         id: "aminou-gym",
-        year: "2026 — PRESENT",
+        year: "2026",
         title: "Aminou Gym Management",
-        role: "Développeur Freelance & Architecte BDD",
-        description: "Conception d'une application de gestion pour une salle de sport (500+ membres). Modélisation relationnelle, abonnements et suivi financier.",
-        longDesc: "<p>Mission freelance visant à digitaliser la gestion d'une salle de sport. J'ai conçu le schéma relationnel sous PostgreSQL (hébergé sur Supabase) et développé l'interface de pilotage complète.</p><p>L'application permet la gestion des abonnements en temps réel, le suivi de présence, la tarification dynamique, et intègre une analyse de rétention (churn) pour identifier les membres à risque.</p>",
+        role: "Développeur d'application & Architecte BDD (Freelance)",
+        description: "Application de gestion de salle de sport pour 500+ membres : abonnements, présence, tarification et suivi financier.",
+        longDesc: "<p>Mission freelance visant à digitaliser intégralement la gestion d'une salle de sport accueillant plus de 500 membres.</p><p>J'ai conçu le schéma relationnel sous <strong>PostgreSQL (Supabase)</strong> et développé l'interface de pilotage de l'activité.</p><p>L'application permet le suivi des abonnements, de la présence, de la tarification et intègre une analyse de rétention (churn) en croisant la présence et l'historique des paiements.</p>",
         tags: ["PostgreSQL", "Supabase", "SQL Avancé"],
         link: "" // Laisse vide si tu n'as pas de lien public
     },
     {
         id: "uesba-web",
         year: "2026",
-        title: "Plateforme Web UESBA",
-        role: "Chef de projet technique",
-        description: "Coordination d'une équipe de 4 personnes. Conception de l'architecture back-end et base de données relationnelle associative.",
-        longDesc: "<p>En tant que chef de projet web pour l'association, j'ai coordonné une équipe de 4 personnes, de la rédaction stricte du cahier des charges jusqu'à la mise en production du site officiel.</p><p>Mes tâches principales incluaient le développement de l'architecture back-end, l'administration de la base de données relationnelle, et la supervision des livrables pour garantir les délais avec MS Project.</p>",
-        tags: ["Gestion de Projet", "Backend", "Bases de données"],
+        title: "Plateforme Web uesba.org",
+        role: "Chef de projet web",
+        description: "Coordination d'une équipe de 4 personnes, développement de l'architecture back-end et administration de la base de données relationnelle.",
+        longDesc: "<p>En tant que chef de projet web, j'ai coordonné une équipe de 4 personnes, de la rédaction du cahier des charges jusqu'à la mise en production de la plateforme officielle.</p><p>J'ai développé l'architecture back-end, administré la base de données relationnelle et supervisé l'avancement technique ainsi que la validation des livrables avec <strong>MS Project</strong> pour garantir le respect des délais.</p>",
+        tags: ["Gestion de Projet", "Backend", "Bases de données", "MS Project"],
         link: "https://uesba.org"
     },
     {
         id: "data-bi",
-        year: "2025 — 2026",
-        title: "Analyses de Données & BI",
-        role: "Data Analyst",
-        description: "Recensement UESBA. Nettoyage via Power Query et conception de tableaux de bord interactifs d'aide à la décision.",
-        longDesc: "<p>J'ai mené le recensement complet de l'UESBA. Les données brutes ont été nettoyées et structurées via Power Query.</p><p>J'ai ensuite conçu un tableau de bord analytique couvrant plus de 400 membres. Cet outil de Business Intelligence est actuellement exploité par l'ambassade et le bureau exécutif de l'association pour orienter leurs décisions stratégiques.</p>",
-        tags: ["Power BI", "Power Query", "Excel Avancé"],
+        year: "2026",
+        title: "Projets Power BI & Analyse de Rétention",
+        role: "Analyste de données",
+        description: "Recensement UESBA (400+ membres) et analyse prédictive de rétention (churn) des membres du Aminou Gym.",
+        longDesc: "<p><strong>1. Recensement UESBA :</strong> Nettoyage et transformation des données via Power Query et création d'un tableau de bord couvrant plus de 400 membres, utilisé directement par l'Ambassade et le bureau exécutif.</p><p><strong>2. Analyse de rétention (Churn) :</strong> Repérage des membres à risque d'abandon pour Aminou Gym en croisant les données d'assiduité et de paiements sous Power BI.</p>",
+        tags: ["Power BI", "Power Query", "Excel Avancé", "Data Analysis"],
+        link: "https://github.com/alisalia-44"
+    },
+    {
+        id: "uesba-presidence",
+        year: "2026",
+        title: "Présidence Exécutive — UESBA",
+        role: "Président de l'Union des Étudiants et Stagiaires Burkinabè en Algérie",
+        description: "Direction du bureau exécutif (7 collaborateurs), organisation d'événements communautaires et représentation diplomatique.",
+        longDesc: "<p>À la tête du bureau exécutif de l'UESBA (7 collaborateurs), j'assure la coordination générale et la gestion des projets communautaires et numériques de l'organisation.</p><p>Je représente officiellement la communauté étudiante auprès de l'Ambassade du Burkina Faso à Alger ainsi qu'auprès du Ministère de l'Enseignement Supérieur.</p>",
+        tags: ["Leadership", "Management", "Représentation", "Gestion d'équipe"],
         link: ""
     }
 ];
@@ -47,7 +57,7 @@ portfolioData.forEach(project => {
             <div class="tech-tags">
                 ${tagsHTML}
             </div>
-            <button class="read-more-link btn-voir-plus" data-id="${project.id}">Voir l'étude de cas →</button>
+            <button class="read-more-link btn-voir-plus" data-id="${project.id}">Voir plus →</button>
         </div>
     </div>
     `;
@@ -65,7 +75,7 @@ const modalLink = document.getElementById("modal-link");
 // Ouverture
 document.querySelectorAll(".btn-voir-plus").forEach(button => {
     button.addEventListener("click", (e) => {
-        const projectId = e.target.getAttribute("data-id");
+        const projectId = e.currentTarget.getAttribute("data-id");
         const projectData = portfolioData.find(p => p.id === projectId);
 
         if (projectData) {
@@ -97,16 +107,17 @@ window.addEventListener("click", (e) => {
     }
 });
 
-// --- SCROLL FLUIDE POUR LA NAVBAR ---
+// --- NAVIGATION FLUIDE ---
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelectorAll('.nav-center a').forEach(a => a.classList.remove('active'));
-        if(this.parentElement.classList.contains('nav-center')) {
+        if (this.parentElement.classList.contains('nav-center')) {
             this.classList.add('active');
         }
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });

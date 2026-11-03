@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Mansour Salia | Ingénieur & Bases de Données</title>
-    <meta name="description" content="Portfolio d'Ali Mansour Salia - Spécialiste bases de données, projets data et réalisations techniques.">
+    <title>Ali Mansour Salia (Ali Salia) | Ingénieur & Bases de Données</title>
+    <meta name="description" content="Portfolio d'Ali Mansour Salia (Ali Salia) - Ingénieur des travaux, spécialiste bases de données, projets data et réalisations techniques.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Balisage Schema.org pour l'indexation Google sur "Ali Salia" -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ali Mansour Salia",
+      "alternateName": "Ali Salia",
+      "jobTitle": "Ingénieur des travaux & Administrateur de Bases de Données",
+      "url": "https://alisalia-44.github.io",
+      "sameAs": [
+        "https://www.linkedin.com/in/alisalia44",
+        "https://github.com/alisalia-44"
+      ]
+    }
+    </script>
 </head>
 <body>
 
@@ -25,7 +41,7 @@
         </div>
         <div class="nav-links">
             <a href="https://linkedin.com/in/alisalia44" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="#" target="_blank">Resume ↗</a>
+            <a href="https://github.com/alisalia-44" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
     </nav>
 
@@ -48,17 +64,17 @@
         </div>
     </section>
 
-    <!-- Section Projets (Générée par data.js) -->
+    <!-- Section Projets & Expériences (Générée par data.js) -->
     <section id="work" class="container">
-        <h2 class="section-title">Études de cas</h2>
+        <h2 class="section-title">PROJETS & EXPÉRIENCES</h2>
         <div class="project-list" id="projects-container">
-            <!-- Injecté par JS -->
+            <!-- Injecté automatiquement par data.js -->
         </div>
     </section>
 
     <!-- Section Info / CV -->
-    <section id="info" class="container" style="border-top: 1px solid var(--border);">
-        <h2 class="section-title">Background & Info</h2>
+    <section id="info" class="container section-border">
+        <h2 class="section-title">FORMATION & COMPÉTENCES</h2>
         <div class="resume-grid">
             <div class="resume-block">
                 <h4>Formation</h4>
@@ -75,28 +91,42 @@
                 <div class="resume-item">
                     <h5>Baccalauréat Technique (Série H)</h5>
                     <p class="meta">Lycée Technique Nationale/ASL, Burkina Faso • 2024</p>
-                    <p class="desc-meta">Mention Bien. 4e rang national, Prix de l’excellence de l’éducation nationale.</p>
+                    <p class="desc-meta">Mention Bien (15,00/20). 4e rang national, Prix de l’excellence de l’éducation nationale.</p>
                 </div>
             </div>
 
             <div class="resume-block">
-                <h4>Leadership & Compétences</h4>
+                <h4>Compétences & Certifications</h4>
                 <div class="resume-item">
-                    <h5>Président Exécutif</h5>
-                    <p class="meta">UESBA (Algérie) • 2026</p>
-                    <p class="desc-meta">Direction du bureau exécutif (7 collaborateurs), gestion de projets communautaires et représentation diplomatique.</p>
-                </div>
-                
-                <div class="resume-item" style="margin-top: 1.5rem;">
-                    <h5>Stack Technique</h5>
+                    <h5>Bases de données & Data</h5>
                     <div class="tech-tags" style="margin-top: 0.5rem;">
                         <span>PostgreSQL</span>
                         <span>SQL Server</span>
+                        <span>SQL Avancé</span>
+                        <span>UML / Merise</span>
                         <span>Power BI</span>
-                        <span>PHP</span>
-                        <span>Linux</span>
-                        <span>UML/Merise</span>
+                        <span>Power Query</span>
+                        <span>Excel Avancé</span>
                     </div>
+                </div>
+                
+                <div class="resume-item" style="margin-top: 1.5rem;">
+                    <h5>Développement, OS & IA</h5>
+                    <div class="tech-tags" style="margin-top: 0.5rem;">
+                        <span>PHP</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                        <span>HTML5 / CSS3</span>
+                        <span>Linux (Ubuntu)</span>
+                        <span>Claude Code</span>
+                        <span>Gemini CLI</span>
+                    </div>
+                </div>
+
+                <div class="resume-item" style="margin-top: 1.5rem;">
+                    <h5>Certifications</h5>
+                    <p class="meta">Microsoft / Coursera & Cisco Networking Academy</p>
+                    <p class="desc-meta">Power BI Data Analyst, Preparing Data for Analysis with Microsoft Excel, IT Customer Support & Security Support.</p>
                 </div>
             </div>
         </div>
@@ -105,18 +135,18 @@
     <!-- Fenêtre Modale (Pop-up) -->
     <div id="project-modal" class="modal hidden">
         <div class="modal-content">
-            <button class="close-button" id="close-modal">&times;</button>
+            <button class="close-button" id="close-modal" aria-label="Fermer">&times;</button>
             <h2 id="modal-title">Titre</h2>
             <div class="tech-tags" id="modal-tags" style="margin-bottom: 1.5rem;"></div>
             <div class="modal-body" id="modal-body">
                 <!-- Texte injecté -->
             </div>
-            <a id="modal-link" href="#" target="_blank" rel="noopener" class="read-more-link hidden" style="margin-top:0;">Lien vers le projet ↗</a>
+            <a id="modal-link" href="#" target="_blank" rel="noopener" class="read-more-link hidden" style="margin-top:0;">Consulter le projet ↗</a>
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 3rem 2rem; color: #555; font-size: 0.85rem;">
-        <p>© 2026 Ali Mansour Salia. All rights reserved.</p>
+    <footer class="site-footer">
+        <p>© 2026 Ali Mansour Salia. Tous droits réservés.</p>
     </footer>
 
     <script src="data.js"></script>

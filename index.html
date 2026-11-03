@@ -3,116 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Mansour Salia | Data & Systèmes</title>
+    <title>Ali Mansour Salia | Ingénieur des travaux & Bases de Données</title>
     <meta name="description" content="Portfolio d'Ali Mansour Salia - Spécialiste bases de données, projets data et réalisations techniques.">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ali Mansour Salia",
-      "jobTitle": "Étudiant en Informatique & Spécialiste Bases de Données",
-      "sameAs": [
-        "https://www.linkedin.com/in/alisalia44",
-        "https://github.com/alisalia-44"
-      ]
-    }
-    </script>
-
-    <!-- Lien vers le fichier CSS séparé -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="nav-brand">
-            <strong>Ali Mansour Salia</strong>
-            <span>Data & Systèmes</span>
+    <header class="window-header">
+        <div class="window-controls">
+            <span class="control red"></span>
+            <span class="control yellow"></span>
+            <span class="control green"></span>
         </div>
-        <div class="nav-center">
-            <a href="#work" class="active">Work</a>
-            <a href="#info">Info</a>
-        </div>
-        <div class="nav-links">
-            <a href="https://linkedin.com/in/alisalia44" target="_blank">LinkedIn ↗</a>
-            <a href="#">Resume ↗</a>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="mac-window">
-            <div class="mac-header">
-                <span class="dot close"></span>
-                <span class="dot min"></span>
-                <span class="dot max"></span>
-            </div>
-            <div class="mac-body">
-                <h1>J'architecture des bases de données, optimise les systèmes & conçois des <span class="serif">solutions</span>.</h1>
-                
-                <div class="hero-sub">
-                    <span><span class="highlight">Étudiant Major de Promo (BTS BDD)</span>. Basé à Relizane, Algérie.</span>
-                    <span>Président de l'UESBA. Passionné par la Data et le Leadership.</span>
-                </div>
+        <div class="window-content">
+            <h1>Je conçois des architectures de <em>données</em>,<br>des systèmes et des <em>solutions</em>.</h1>
+            <p class="subtitle">Ali Mansour Salia — Ingénieur des travaux & Administrateur de Bases de Données. Basé en Algérie.</p>
+            <div class="links">
+                <a href="https://github.com/alisalia-44" target="_blank" rel="noopener">GitHub ↗</a>
+                <a href="https://www.linkedin.com/in/alisalia44" target="_blank" rel="noopener">LinkedIn ↗</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section id="work" class="container">
-        <h2 class="section-title">Selected Work</h2>
-        <div class="project-list" id="projects-container">
-            <!-- Injecté par JS -->
-        </div>
-    </section>
-
-    <section id="info" class="container" style="border-top: 1px solid var(--border);">
-        <h2 class="section-title">Background & Info</h2>
-        <div class="resume-grid">
-            <div class="resume-block">
-                <h4>Formation</h4>
-                <div class="resume-item">
-                    <h5>BTS Informatique (Bases de données)</h5>
-                    <p class="meta">INSFP de Relizane, Algérie • 2027</p>
-                    <p style="color: #a0a0a0; font-size: 0.85rem;">Major de promotion, moyenne 16,8/20. Boursier de la République Algérienne.</p>
-                </div>
-                <div class="resume-item">
-                    <h5>Baccalauréat Technique (Série H)</h5>
-                    <p class="meta">Lycée Technique Nationale/ASL, Burkina Faso • 2024</p>
-                    <p style="color: #a0a0a0; font-size: 0.85rem;">Mention Bien. 4e rang national, Prix de l’excellence de l’éducation nationale.</p>
-                </div>
+    <main class="container">
+        <section id="projets-section">
+            <h2>Études de cas</h2>
+            <div class="grid" id="projects-container">
+                <!-- Généré par data.js -->
             </div>
+        </section>
 
-            <div class="resume-block">
-                <h4>Leadership & Compétences</h4>
-                <div class="resume-item">
-                    <h5>Président Exécutif</h5>
-                    <p class="meta">UESBA (Algérie) • 2026</p>
-                    <p style="color: #a0a0a0; font-size: 0.85rem;">Direction du bureau exécutif (7 collaborateurs), gestion de projets communautaires et représentation diplomatique.</p>
-                </div>
-                
-                <div class="resume-item" style="margin-top: 1.5rem;">
-                    <h5>Stack Technique</h5>
-                    <div class="tech-tags" style="margin-top: 0.5rem;">
-                        <span>PostgreSQL</span>
-                        <span>SQL Server</span>
-                        <span>Power BI</span>
-                        <span>PHP</span>
-                        <span>Linux</span>
-                        <span>UML/Merise</span>
-                    </div>
-                </div>
+        <section id="parcours-section">
+            <h2>Parcours & Leadership</h2>
+            <div class="timeline" id="timeline-container">
+                <!-- Généré par data.js -->
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer style="text-align: center; padding: 3rem 2rem; color: #555; font-size: 0.85rem;">
-        <p>© 2026 Ali Mansour Salia. All rights reserved.</p>
+    <!-- Fenêtre Modale pour les détails des projets -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="close-button" id="close-modal">×</button>
+            <h2 id="modal-title">Titre du projet</h2>
+            <div class="tags" id="modal-tags"></div>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenu long injecté ici -->
+            </div>
+            <a id="modal-link" href="#" target="_blank" rel="noopener" class="button-link hidden">Consulter le projet ↗</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© Ali Mansour Salia — Portfolio personnel</p>
+        </div>
     </footer>
 
-    <!-- Lien vers le fichier JavaScript séparé -->
     <script src="data.js"></script>
 </body>
 </html>

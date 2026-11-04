@@ -57,19 +57,19 @@ const portfolioData = [
 /* ---------- Formation (du plus récent au plus ancien) ---------- */
 const educationData = [
     {
-        title: "Licence 3 professionnelle — Réseaux et Systèmes Informatiques",
-        meta: "Institut Supérieur de Technologies (IST), Ouagadougou — en ligne • 2026 – 2027",
-        desc: "Semestres 5 et 6 : administration systèmes, réseaux et infrastructures."
+        title: "Ingénieur des Travaux — Réseaux et Systèmes Informatiques",
+        meta: "Institut Supérieur de Technologies (IST), Ouagadougou • 2027",
+        desc: "Administration systèmes, réseaux et infrastructures."
     },
     {
-        title: "BTS Informatique — option bases de données",
-        meta: "INSFP de Relizane, Algérie • diplôme prévu en 2027",
-        desc: "Major de promotion, moyenne cumulée de 16,8/20. Boursier de la République algérienne."
+        title: "BTS Informatique —  bases de données",
+        meta: "INSFP de Relizane, Algérie • 2027 ",
+        desc: "Major de promotion, Boursier de la République algérienne."
     },
     {
         title: "Baccalauréat technique (série H, informatique)",
         meta: "Lycée Technique National / ASL, Ouagadougou • 2024",
-        desc: "Mention Bien (15,00/20). 4e rang national, Prix de l'excellence de l'éducation nationale."
+        desc: "Mention Bien. 4e rang national, Prix de l'excellence de l'éducation nationale."
     }
 ];
 

@@ -58,7 +58,7 @@ const portfolioData = [
 const educationData = [
     {
         title: "Ingénieur des Travaux — Réseaux et Systèmes Informatiques",
-        meta: "Institut Supérieur de Technologies (IST), Ouagadougou • 2027",
+        meta: "Institut Supérieur de Technologies • 2027",
         desc: "Administration systèmes, réseaux et infrastructures."
     },
     {
@@ -89,4 +89,5 @@ const skillsData = [
 const certificationsData = {
     meta: "Microsoft / Coursera & Cisco Networking Academy",
     desc: "Power BI Data Analyst, Preparing Data for Analysis with Microsoft Excel, IT Customer Support & Security Support."
+
 };

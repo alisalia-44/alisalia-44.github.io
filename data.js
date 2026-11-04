@@ -44,10 +44,10 @@ const portfolioData = [
     {
         id: "uesba-presidence",
         year: "2026",
-        title: "Présidence exécutive — UESBA",
+        title: "Présidence exécutive — UESBA (2025-2026)",
         role: "Président de l'Union des Étudiants et Stagiaires Burkinabè en Algérie",
         description: "Direction du bureau exécutif (7 collaborateurs), organisation d'événements communautaires et représentation diplomatique.",
-        longDesc: "<p>À la tête du bureau exécutif de l'UESBA (7 collaborateurs), j'assure la coordination générale et la gestion des projets communautaires et numériques de l'organisation.</p><p>Je représente officiellement la communauté étudiante auprès de l'Ambassade du Burkina Faso à Alger ainsi qu'auprès du Ministère de l'Enseignement Supérieur.</p>",
+        longDesc: "<p>À la tête du bureau exécutif de l'UESBA  (7 collaborateurs), j'assure la coordination générale et la gestion des projets communautaires et numériques de l'organisation.</p><p>Je représente officiellement la communauté étudiante auprès de l'Ambassade du Burkina Faso à Alger ainsi qu'auprès du Ministère de l'Enseignement Supérieur.</p>",
         tags: ["Leadership", "Management", "Représentation", "Gestion d'équipe"],
         link: "",
         linkLabel: ""

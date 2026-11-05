@@ -81,7 +81,7 @@ const skillsData = [
     },
     {
         title: "Développement, systèmes & IA",
-        items: ["PHP", "Java", "C++", "HTML5 / CSS3", "Linux (Ubuntu)", "Claude Code", "Gemini CLI"]
+        items: ["PHP", "Java", "C++", "HTML5 / CSS3", "Java script", "Linux (Ubuntu)", "Claude Code", "Gemini CLI"]
     }
 ];
 

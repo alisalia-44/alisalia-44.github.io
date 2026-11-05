@@ -77,7 +77,7 @@ const educationData = [
 const skillsData = [
     {
         title: "Bases de données & data",
-        items: ["PostgreSQL", "SQL Server", "SQL avancé", "UML / Merise", "Power BI", "Power Query", "Excel avancé"]
+        items: ["PostgreSQL", "SQL Server", "SQL avancé", "Oracle Database", "UML / Merise", "Power BI", "Power Query", "Excel avancé"]
     },
     {
         title: "Développement, systèmes & IA",

@@ -15,9 +15,20 @@
 </head>
 <body>
     <main>
-        <h1>Page introuvable</h1>
-        <p>L'adresse demandée n'existe pas.</p>
-        <a href="/">Retour à l'accueil ›</a>
+        <h1 id="t">Page introuvable</h1>
+        <p id="p">L'adresse demandée n'existe pas.</p>
+        <a id="a" href="/">Retour à l'accueil ›</a>
     </main>
+    <script>
+        try {
+            if (localStorage.getItem("lang") === "en") {
+                document.documentElement.lang = "en";
+                document.title = "Page not found — Ali Mansour Salia";
+                document.getElementById("t").textContent = "Page not found";
+                document.getElementById("p").textContent = "The requested address does not exist.";
+                document.getElementById("a").textContent = "Back to home ›";
+            }
+        } catch (e) {}
+    </script>
 </body>
 </html>

@@ -512,6 +512,88 @@ dialog::backdrop {
     font-weight: 600;
 }
 
+/* --- PHOTO DE PROFIL --- */
+.avatar {
+    display: block;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    background: #fff;
+    margin-bottom: 2.5rem;
+}
+
+/* --- BOUTON DE LANGUE FR | EN --- */
+.nav-links {
+    align-items: center;
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    padding: 0.2rem 0.1rem;
+    font: inherit;
+    color: var(--soft);
+    cursor: pointer;
+}
+
+.lang-switch button:hover {
+    color: var(--text);
+}
+
+.lang-switch button[aria-pressed="true"] {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* --- CONTACT --- */
+.contact-intro {
+    color: var(--muted);
+    max-width: 34em;
+    margin: -3rem 0 3rem;
+}
+
+.contact-list {
+    display: grid;
+    gap: 0.9rem;
+    max-width: 520px;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    min-height: 3.5rem;
+    padding: 0.9rem 1.5rem;
+    background: var(--surface);
+    color: var(--text);
+    border-radius: 980px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.25s ease;
+}
+
+.contact-link:hover {
+    background: var(--surface-2);
+    text-decoration: none;
+}
+
+.contact-link svg {
+    width: 1.35rem;
+    height: 1.35rem;
+    flex: none;
+}
+
 /* --- PIED DE PAGE --- */
 .site-footer {
     text-align: center;
@@ -548,7 +630,8 @@ dialog::backdrop {
     }
 
     .nav-brand { order: 1; }
-    .nav-links { order: 2; gap: 1.25rem; }
+    .nav-links { order: 2; gap: 1rem; }
+    .contact-intro { margin-top: -2rem; }
 
     .nav-center {
         order: 3;

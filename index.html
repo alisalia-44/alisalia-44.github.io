@@ -35,6 +35,8 @@
     <meta name="twitter:image" content="https://alisalia-44.github.io/og-image.png">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="fr" href="https://alisalia-44.github.io/?lang=fr">
+    <link rel="alternate" hreflang="en" href="https://alisalia-44.github.io/?lang=en">
     <link rel="stylesheet" href="style.css">
 
     <!-- Données structurées : relie le site, LinkedIn, GitHub et l'UESBA à la même personne -->
@@ -48,7 +50,7 @@
           "url": "https://alisalia-44.github.io/",
           "name": "Ali Mansour Salia",
           "alternateName": "Ali Salia",
-          "inLanguage": "fr",
+          "inLanguage": ["fr", "en"],
           "publisher": { "@id": "https://alisalia-44.github.io/#person" }
         },
         {
@@ -58,7 +60,7 @@
           "name": "Ali Mansour Salia (Ali Salia) — Portfolio",
           "isPartOf": { "@id": "https://alisalia-44.github.io/#website" },
           "mainEntity": { "@id": "https://alisalia-44.github.io/#person" },
-          "dateModified": "2026-11-05T10:00:00+01:00"
+          "dateModified": "2026-11-05T20:00:00+01:00"
         },
         {
           "@type": "Person",
@@ -69,6 +71,7 @@
           "familyName": "Salia",
           "alternateName": ["Ali Salia"],
           "url": "https://alisalia-44.github.io/",
+          "image": "https://alisalia-44.github.io/photo-ali-salia.jpg",
           "description": "Étudiant en informatique spécialisé en bases de données et data, président de l'Union des Étudiants et Stagiaires Burkinabè en Algérie (UESBA).",
           "jobTitle": "Étudiant en informatique, bases de données et data",
           "nationality": { "@type": "Country", "name": "Burkina Faso" },
@@ -98,21 +101,25 @@
 </head>
 <body>
 
-    <a class="skip-link" href="#projets">Aller au contenu</a>
+    <a class="skip-link" href="#projets" data-i18n="skip">Aller au contenu</a>
 
     <header>
-        <nav aria-label="Navigation principale">
+        <nav aria-label="Navigation principale" data-i18n-aria="navAria">
             <a class="nav-brand" href="#top" aria-label="Ali Mansour Salia, retour en haut">
                 <strong>Ali Mansour Salia</strong>
-                <span>Data & Systèmes</span>
+                <span data-i18n="brandSub">Data & Systèmes</span>
             </a>
             <div class="nav-center">
-                <a href="#projets" data-section="projets" class="active">Projets</a>
-                <a href="#parcours" data-section="parcours">Parcours</a>
+                <a href="#projets" data-section="projets" class="active" data-i18n="navProjects">Projets</a>
+                <a href="#parcours" data-section="parcours" data-i18n="navBackground">Parcours</a>
+                <a href="#contact" data-section="contact" data-i18n="navContact">Contact</a>
             </div>
             <div class="nav-links">
                 <a href="https://www.linkedin.com/in/alisalia44" target="_blank" rel="me noopener">LinkedIn</a>
                 <a href="https://github.com/alisalia-44" target="_blank" rel="me noopener">GitHub</a>
+                <div class="lang-switch" role="group" aria-label="Langue" data-i18n-aria="langAria">
+                    <button type="button" data-lang="fr" aria-pressed="true">FR</button><span aria-hidden="true">|</span><button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
             </div>
         </nav>
     </header>
@@ -129,15 +136,16 @@
                     <span class="mac-title">ali-mansour-salia</span>
                 </div>
                 <div class="mac-body">
+                    <img class="avatar" src="photo-ali-salia.jpg" alt="Portrait d'Ali Mansour Salia" data-i18n-alt="photoAlt" width="132" height="132" fetchpriority="high">
                     <h1 id="page-title">Ali Mansour Salia</h1>
-                    <p class="tagline">Je conçois, administre et optimise des bases de données.</p>
-                    <p class="intro">
+                    <p class="tagline" data-i18n="tagline">Je conçois, administre et optimise des bases de données.</p>
+                    <p class="intro" data-i18n-html="intro">
                         Ali Mansour Salia, aussi connu sous le nom d'Ali Salia, est un étudiant en informatique,
                         spécialisé en base de données & data. Il vit en Algérie, et a présidé l'<a href="https://uesba.org" target="_blank" rel="noopener">Union des Étudiants et Stagiaires Burkinabè en Algérie</a> (UESBA).
                     </p>
                     <div class="actions">
-                        <a class="pill" href="#projets">Voir mes projets</a>
-                        <a class="text-link" href="https://www.linkedin.com/in/alisalia44" target="_blank" rel="me noopener">Me contacter sur LinkedIn</a>
+                        <a class="pill" href="#projets" data-i18n="ctaProjects">Voir mes projets</a>
+                        <a class="text-link" href="https://www.linkedin.com/in/alisalia44" target="_blank" rel="me noopener" data-i18n="ctaLinkedin">Me contacter sur LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -145,38 +153,45 @@
 
         <!-- Projets (générés par main.js à partir de data.js) -->
         <section id="projets" class="container" aria-labelledby="projets-title">
-            <h2 class="section-title" id="projets-title">Projets et expériences</h2>
+            <h2 class="section-title" id="projets-title" data-i18n="projectsTitle">Projets et expériences</h2>
             <div class="project-list" id="projects-container"></div>
-            <noscript><p class="noscript">Les projets s'affichent avec JavaScript. Retrouve-les aussi sur <a href="https://github.com/alisalia-44">mon GitHub</a>.</p></noscript>
+            <noscript><p class="noscript" data-i18n-html="noscript">Les projets s'affichent avec JavaScript. Retrouve-les aussi sur <a href="https://github.com/alisalia-44">mon GitHub</a>.</p></noscript>
         </section>
 
         <!-- Parcours (généré par main.js à partir de data.js) -->
         <section id="parcours" class="container" aria-labelledby="parcours-title">
-            <h2 class="section-title" id="parcours-title">Parcours et compétences</h2>
+            <h2 class="section-title" id="parcours-title" data-i18n="backgroundTitle">Parcours et compétences</h2>
             <div class="resume-grid">
                 <div class="resume-block">
-                    <h3>Formation</h3>
+                    <h3 data-i18n="education">Formation</h3>
                     <div id="education-container"></div>
                 </div>
                 <div class="resume-block">
-                    <h3>Compétences</h3>
+                    <h3 data-i18n="skills">Compétences</h3>
                     <div id="skills-container"></div>
-                    <h3 class="sub-heading">Certifications</h3>
+                    <h3 class="sub-heading" data-i18n="certifications">Certifications</h3>
                     <div id="certifications-container"></div>
                 </div>
             </div>
         </section>
 
+        <!-- Contact (liens générés par main.js à partir de contactData dans data.js) -->
+        <section id="contact" class="container" aria-labelledby="contact-title">
+            <h2 class="section-title" id="contact-title" data-i18n="contactTitle">Contact</h2>
+            <p class="contact-intro" data-i18n="contactIntro">Retrouvez mon travail ou contactez-moi ici.</p>
+            <div class="contact-list" id="contact-container"></div>
+        </section>
+
     </main>
 
     <footer class="site-footer">
-        <p>© 2026 Ali Mansour Salia. Tous droits réservés.</p>
+        <p data-i18n="footer">© 2026 Ali Mansour Salia. Tous droits réservés.</p>
     </footer>
 
     <!-- Fenêtre d'étude de cas (élément <dialog> natif : accessible au clavier, Échap pour fermer) -->
     <dialog id="project-modal" aria-labelledby="modal-title">
         <div class="modal-inner">
-            <button class="close-button" id="close-modal" type="button" aria-label="Fermer">×</button>
+            <button class="close-button" id="close-modal" type="button" aria-label="Fermer" data-i18n-aria="close">×</button>
             <h2 id="modal-title"></h2>
             <p class="modal-role" id="modal-role"></p>
             <ul class="tech-tags" id="modal-tags"></ul>
